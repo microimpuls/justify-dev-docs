@@ -1,0 +1,7 @@
+*.pyc
+*.sublime-project
+*.sublime-workspace
+*.bat
+.idea/
+_build/
+
