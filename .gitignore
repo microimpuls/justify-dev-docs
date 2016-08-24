@@ -2,6 +2,7 @@
 *.sublime-project
 *.sublime-workspace
 *.bat
+justify.md
 .idea/
 _build/
 
