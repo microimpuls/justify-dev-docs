@@ -65,7 +65,9 @@ app.js
 * **api_key** - *string* - ключ доступа к Microimpuls Middleware, для других платформ задаётся пустой строкой.
 * **api_url** - *string* - адрес Middleware, по которому будет происходить доступ к её API.
 * **template_name** - *string* - системное имя шаблона (``classic``, ``cti``, ``focus``, ``impuls``, ``iridium``, ``orbit``).
-* **template_size** - *object* - размер дисплея шаблона (1280х720, 1920х1080 и т.д.). Пример::
+* **template_size** - *object* - размер дисплея шаблона (1280х720, 1920х1080 и т.д.). Пример:
+
+::
     'template_size': {
         'classic': {
             'default': [1280, 720],
