@@ -48,17 +48,8 @@
 app.js
 ------
 
-**Поля объекта App**
 **ПОЛЯ ОБЪЕКТА App**
 
-* `middlewareName` - имя серверной части сервиса, на данный момент задано по дефолту, как "Microimpuls IPTV/OTT Middleware (c) Microimpuls LLC, http://www.microimpuls.com"
-* `device` - устройство просмотра, в дальнейшем, уже внутри шаблона, этому полю будет присвоен объект Device.
-* `display` - поле, представляющее собой объект класса BaseDisplay.
-* `settings` - поле, представляющее собой объект класса Settings("наследуется" от BaseSettings), который в каждом шаблоне свой.
-* `data` - поле, представляющее собой объект класса BaseData.
-* `player` - поле, представляющее собой объект класса Player("наследуется" от BasePlayer), который в каждом шаблоне свой.
-* `playerScreen, loginScreen, mainmenuScreen, tvChannelsScreen, epgScreen, settingsScreen, infoScreen, videoCatalogScreen, videoScreen` - объявление основных экранов сервиса, все остальные экраны для каждого шаблона объявляются и определяются внутри шаблонов.
-* `clientSettings` - поле клиентских настроек, весь перечень возможных полей этого объекта представлен в app.js, там же они инициализированы дефолтными значениями и там же происходит присваивание этому полю объекта CLIENT_SETTINGS (из файла client.js).
 * **middlewareName** - имя серверной части сервиса, на данный момент задано по дефолту, как "Microimpuls IPTV/OTT Middleware (c) Microimpuls LLC, http://www.microimpuls.com"
 * **device** - устройство просмотра, в дальнейшем, уже внутри шаблона, этому полю будет присвоен объект Device.
 * **display** - поле, представляющее собой объект класса BaseDisplay.
@@ -70,32 +61,6 @@ app.js
 
 **Поля clientSettings:**
 
-* `client_id` - *int* - идентификатор клиента в Microimpuls Middleware, для других платформ задаётся 0.
-* `api_key` - *string* - ключ доступа к Microimpuls Middleware, для других платформ задаётся пустой строкой.
-* `api_url` - *string* - адрес Middleware, по которому будет происходить доступ к её API.
-* `template_name` - *string* - системное имя шаблона ('classic', 'cti', 'focus', 'impuls', 'iridium', 'orbit').
-* `template_size` - *object* - размер дисплея шаблона (1280х720, 1920х1080 и т.д.).
-* `settings_filename` - *string* - название файла, где хранятся куки.
-* `site_url` - *string* - адрес сайта сервиса.
-* `demo_mode` - *bool* -
-* `debug` - *bool* -  флаг, отображающий консоль разработчика.
-* `signup_auto_activation_period` - *int* -
-* `show_welcome_message` - *bool* -
-* `welcome_message` - *string* -
-* `registration_available` - *bool* -
-* `template_styles` - *object* -
-* `settings_menu_custom_items` - *list* -
-* `auth_mode` - *string* - режимы авторизации ('password' - по паролю и номеру абонемента, 'abonement' - только по номеру абонемента, 'device_uid' - по устройству).
-* `play_record_continuously` - *bool* -
-* `server_rewind_mode` - *bool* -
-* `use_template_default_resolution` - *bool* -
-* `show_disconnect_message` - *bool* -
-* `samsung_guidelines_compatibility_mode` - *bool* - флаг, при включении которого логика переходов и нажатий подстраивается под политику Samsung.
-* `auto_launch_last_viewed_channel` - *bool* - флаг, отвечающий за автозапуск последнего просмотренного канала при включении приложения.
-* `programs_limit_for_channel_list_request` - *int* -
-* `default_timezone` - *int* - часовой пояс по умолчанию.
-* `default_buffersize` - *int* - размер буферизации по умолчанию (структуру с перечислением значений можно найти в settings.js).
-* `default_lang` - *int* - язык приложения по умолчанию (структуру с перечислением значений можно найти в settings.js)
 * **client_id** - *int* - идентификатор клиента в Microimpuls Middleware, для других платформ задаётся 0.
 * **api_key** - *string* - ключ доступа к Microimpuls Middleware, для других платформ задаётся пустой строкой.
 * **api_url** - *string* - адрес Middleware, по которому будет происходить доступ к её API.
@@ -111,6 +76,7 @@ app.js
             'default': [1280, 720]
         }
     }
+
 * **settings_filename** - *string* - название файла, где хранятся куки.
 * **site_url** - *string* - адрес сайта сервиса.
 * **debug** - *bool* -  флаг, отображающий консоль разработчика.
@@ -123,6 +89,7 @@ app.js
     {
         'template_name': ['style_template_name1', 'style_template_name2', ...]
     }
+
 где ``template_name`` - системное имя шаблона, а ``style_template_name...`` - системные названия доступных в данном шаблоне стилевых оформлений. На данный момент функционал смены стилей реализован только в шаблоне ``impuls`` (стили ``modern``, ``main``).
 * **settings_menu_custom_items** - *list* - массив кастомных пунктов экрана настроек, на данный момент используется только для ``impuls``. В примере массив всех возможных пунктов шаблона ``impuls`` (первые 4 пункта добавлены по умолчанию):
 ::
@@ -139,15 +106,8 @@ app.js
 * **default_buffersize** - *int* - размер буферизации по умолчанию (структуру с перечислением значений можно найти в settings.js).
 * **default_lang** - *int* - язык приложения по умолчанию (структуру с перечислением значений можно найти в settings.js)
 
-**Методы**
 **МЕТОДЫ**
 
-* `detectTemplate()` -
-* `reloadToTemplate(templateName)` -
-* `detectAndReloadTemplate(templateName, force)`
-* `setAccountTemplate(templateName)`
-* `resetAccountTemplate()`
-* `fireEvent(eventType, eventArgument)`
 * `detectTemplate()`
 +-----------------+-------------------------------------------------------------+
 | Параметры       | Описание                                                    |
@@ -192,9 +152,6 @@ display.js
 
 helper.js
 ---------
-
-keytable.js
------------
 
 lang.js
 -------
