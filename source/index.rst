@@ -13,4 +13,16 @@ Justify (Javascript universal smart TV interface framework)
 
     intro.rst
     engine.rst
-
+    app.rst
+    application.rst
+    data.rst
+    device.rst
+    display.rst
+    helper.rst
+    lang.rst
+    logger.rst
+    menu.rst
+    player.rst
+    screen.rst
+    settings.rst
+    template-impuls.rst
