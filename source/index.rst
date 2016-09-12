@@ -26,3 +26,4 @@ Justify (Javascript universal smart TV interface framework)
     screen.rst
     settings.rst
     template-impuls.rst
+    contacts.rst
