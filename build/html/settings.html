@@ -1,0 +1,253 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>settings.js &mdash; Документация justify-docs 1.0</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Документация justify-docs 1.0" href="index.html"/>
+        <link rel="next" title="SDK Impuls template" href="template-impuls.html"/>
+        <link rel="prev" title="screen.js" href="screen.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> justify-docs
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Общее описание фреймворка</a></li>
+<li class="toctree-l1"><a class="reference internal" href="engine.html">Описание содержания и структуры <code class="docutils literal"><span class="pre">engine</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="app.html">app.js</a></li>
+<li class="toctree-l1"><a class="reference internal" href="application.html">application.js</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">data.js</a></li>
+<li class="toctree-l1"><a class="reference internal" href="device.html">device.js</a></li>
+<li class="toctree-l1"><a class="reference internal" href="display.html">display.js</a></li>
+<li class="toctree-l1"><a class="reference internal" href="helper.html">helper.js</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lang.html">lang.js</a></li>
+<li class="toctree-l1"><a class="reference internal" href="logger.html">logger.js</a></li>
+<li class="toctree-l1"><a class="reference internal" href="menu.html">menu.js</a></li>
+<li class="toctree-l1"><a class="reference internal" href="player.html">player.js</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screen.html">screen.js</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">settings.js</a></li>
+<li class="toctree-l1"><a class="reference internal" href="template-impuls.html">SDK Impuls template</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">justify-docs</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>settings.js</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/settings.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="settings-js">
+<h1>settings.js<a class="headerlink" href="#settings-js" title="Ссылка на этот заголовок">¶</a></h1>
+<p><strong>ПОЛЯ СУЩНОСТИ BaseSettings</strong></p>
+<ul class="simple">
+<li><strong>timezoneValues</strong></li>
+<li><strong>bufferSizeValues</strong></li>
+<li><strong>langValues</strong></li>
+<li><strong>timezone</strong></li>
+<li><strong>bufferSize</strong></li>
+<li><strong>lang</strong></li>
+</ul>
+<p><strong>МЕТОДЫ СУЩНОСТИ BaseSettings</strong></p>
+<ul class="simple">
+<li><strong>saveSettings()</strong></li>
+<li><strong>loadSettings()</strong></li>
+<li><strong>clearSettings()</strong></li>
+</ul>
+<p>Ниже представлен перечень get-теров и set-теров для пунктов экрана настроек. Ввиду того, что список этих пунктов различен для каждого шаблона, в BaseSettings указаны не все, а только основные. Соответственно, описание некоторых методов ниже также будет опущено по причине их тривиальности.</p>
+<ul class="simple">
+<li><strong>getTimezone()</strong></li>
+<li><strong>getTimezoneName()</strong></li>
+<li><strong>getTimezoneValue()</strong></li>
+<li><strong>getTimezoneValues()</strong></li>
+<li><strong>setTimezone(value)</strong></li>
+<li><strong>getDefaultTimezone()</strong></li>
+<li><strong>getBufferSize()</strong></li>
+<li><strong>getBufferSizeName()</strong></li>
+<li><strong>getBufferSizeValue()</strong></li>
+<li><strong>getBufferSizeValues()</strong></li>
+<li><strong>setBufferSize()</strong></li>
+<li><strong>getDefaultBufferSize()</strong></li>
+<li><strong>getLang()</strong></li>
+<li><strong>getLangName()</strong></li>
+<li><strong>getLangValue()</strong></li>
+<li><strong>getLangValues()</strong></li>
+<li><strong>setLang()</strong></li>
+<li><strong>getDefaultLang()</strong></li>
+</ul>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="template-impuls.html" class="btn btn-neutral float-right" title="SDK Impuls template" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="screen.html" class="btn btn-neutral" title="screen.js" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Microimpuls LLC, www.microimpuls.com.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

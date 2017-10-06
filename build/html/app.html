@@ -1,0 +1,478 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>app.js &mdash; Документация justify-docs 1.0</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Документация justify-docs 1.0" href="index.html"/>
+        <link rel="next" title="application.js" href="application.html"/>
+        <link rel="prev" title="Описание содержания и структуры engine" href="engine.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> justify-docs
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Общее описание фреймворка</a></li>
+<li class="toctree-l1"><a class="reference internal" href="engine.html">Описание содержания и структуры <code class="docutils literal"><span class="pre">engine</span></code></a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">app.js</a></li>
+<li class="toctree-l1"><a class="reference internal" href="application.html">application.js</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">data.js</a></li>
+<li class="toctree-l1"><a class="reference internal" href="device.html">device.js</a></li>
+<li class="toctree-l1"><a class="reference internal" href="display.html">display.js</a></li>
+<li class="toctree-l1"><a class="reference internal" href="helper.html">helper.js</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lang.html">lang.js</a></li>
+<li class="toctree-l1"><a class="reference internal" href="logger.html">logger.js</a></li>
+<li class="toctree-l1"><a class="reference internal" href="menu.html">menu.js</a></li>
+<li class="toctree-l1"><a class="reference internal" href="player.html">player.js</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screen.html">screen.js</a></li>
+<li class="toctree-l1"><a class="reference internal" href="settings.html">settings.js</a></li>
+<li class="toctree-l1"><a class="reference internal" href="template-impuls.html">SDK Impuls template</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">justify-docs</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>app.js</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/app.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="app-js">
+<h1>app.js<a class="headerlink" href="#app-js" title="Ссылка на этот заголовок">¶</a></h1>
+<p><strong>ПОЛЯ ОБЪЕКТА App</strong></p>
+<ul class="simple">
+<li><strong>middlewareName</strong> - имя серверной части сервиса, на данный момент задано по дефолту, как &#8220;Microimpuls IPTV/OTT Middleware (c) Microimpuls LLC, <a class="reference external" href="http://www.microimpuls.com">http://www.microimpuls.com</a>&#8220;</li>
+<li><strong>device</strong> - устройство просмотра, в дальнейшем, уже внутри шаблона, этому полю будет присвоен объект Device.</li>
+<li><strong>display</strong> - поле, представляющее собой объект класса BaseDisplay.</li>
+<li><strong>settings</strong> - поле, представляющее собой объект класса Settings(&#8220;наследуется&#8221; от BaseSettings), который в каждом шаблоне свой.</li>
+<li><strong>data</strong> - поле, представляющее собой объект класса BaseData.</li>
+<li><strong>player</strong> - поле, представляющее собой объект класса Player(&#8220;наследуется&#8221; от BasePlayer), который в каждом шаблоне свой.</li>
+<li><strong>playerScreen, loginScreen, mainmenuScreen, tvChannelsScreen, epgScreen, settingsScreen, infoScreen, videoCatalogScreen, videoScreen</strong> - объявление основных экранов сервиса, все остальные экраны для каждого шаблона объявляются и определяются внутри шаблонов.</li>
+<li><strong>clientSettings</strong> - поле клиентских настроек, весь перечень возможных полей этого объекта представлен в app.js, там же они инициализированы дефолтными значениями и там же происходит присваивание этому полю объекта CLIENT_SETTINGS (из файла client.js).</li>
+</ul>
+<p><strong>Поля clientSettings:</strong></p>
+<ul>
+<li><p class="first"><strong>client_id</strong> - <em>int</em> - идентификатор клиента в Microimpuls Middleware, для других платформ задаётся 0.</p>
+</li>
+<li><p class="first"><strong>api_key</strong> - <em>string</em> - ключ доступа к Microimpuls Middleware, для других платформ задаётся пустой строкой.</p>
+</li>
+<li><p class="first"><strong>api_url</strong> - <em>string</em> - адрес Middleware, по которому будет происходить доступ к её API.</p>
+</li>
+<li><p class="first"><strong>template_name</strong> - <em>string</em> - системное имя шаблона (<code class="docutils literal"><span class="pre">classic</span></code>, <code class="docutils literal"><span class="pre">cti</span></code>, <code class="docutils literal"><span class="pre">focus</span></code>, <code class="docutils literal"><span class="pre">impuls</span></code>, <code class="docutils literal"><span class="pre">iridium</span></code>, <code class="docutils literal"><span class="pre">orbit</span></code>).</p>
+</li>
+<li><p class="first"><strong>template_size</strong> - <em>object</em> - размер дисплея шаблона (1280х720, 1920х1080 и т.д.). Пример:</p>
+<blockquote>
+<div><p><code class="docutils literal"><span class="pre">'template_size':</span> <span class="pre">{</span> <span class="pre">'classic':</span> <span class="pre">{</span> <span class="pre">'720x576':</span> <span class="pre">[720,</span> <span class="pre">576]</span> <span class="pre">},</span> <span class="pre">'impuls':</span> <span class="pre">{</span> <span class="pre">'default':</span> <span class="pre">[1280,</span> <span class="pre">720]</span> <span class="pre">}</span> <span class="pre">}</span></code></p>
+</div></blockquote>
+</li>
+<li><p class="first"><strong>settings_filename</strong> - <em>string</em> - название файла, где хранятся куки.</p>
+</li>
+<li><p class="first"><strong>site_url</strong> - <em>string</em> - адрес сайта сервиса.</p>
+</li>
+<li><p class="first"><strong>debug</strong> - <em>bool</em> -  флаг, отображающий консоль разработчика.</p>
+</li>
+<li><p class="first"><strong>signup_auto_activation_period</strong> - <em>int</em> - количество дней, после которых сервис автоматически запросит активацию (оплату), другими словами - бесплатный период просмотра сервиса.</p>
+</li>
+<li><p class="first"><strong>show_welcome_message</strong> - <em>bool</em> - флаг, отображающий, показывать ли приветственное попап-сообщение пользователю при первом входе.</p>
+</li>
+<li><p class="first"><strong>welcome_message</strong> - <em>string</em> - текст, содержащийся в приветственном попап-сообщении.</p>
+</li>
+<li><p class="first"><strong>registration_available</strong> - <em>bool</em> - флаг, отвечающий за возможность регистрации нового пользователя прямо из приложения.</p>
+</li>
+<li><p class="first"><strong>template_styles</strong> - <em>object</em> - объект типа:</p>
+<blockquote>
+<div><p><code class="docutils literal"><span class="pre">{</span> <span class="pre">'template_name':</span> <span class="pre">['style_template_name1',</span> <span class="pre">'style_template_name2',</span> <span class="pre">...]</span> <span class="pre">}</span></code></p>
+<p>где <code class="docutils literal"><span class="pre">template_name</span></code> - системное имя шаблона, а <code class="docutils literal"><span class="pre">style_template_name...</span></code> - системные названия доступных в данном шаблоне стилевых оформлений. На данный момент функционал смены стилей реализован только в шаблоне <code class="docutils literal"><span class="pre">impuls</span></code> (стили <code class="docutils literal"><span class="pre">modern</span></code>, <code class="docutils literal"><span class="pre">main</span></code>).</p>
+</div></blockquote>
+</li>
+<li><p class="first"><strong>settings_menu_custom_items</strong> - <em>list</em> - массив кастомных пунктов экрана настроек, на данный момент используется только для <code class="docutils literal"><span class="pre">impuls</span></code>. В примере массив всех возможных пунктов шаблона <code class="docutils literal"><span class="pre">impuls</span></code> (первые 4 пункта добавлены по умолчанию):</p>
+<blockquote>
+<div><p><code class="docutils literal"><span class="pre">['buffersize',</span> <span class="pre">'timezone',</span> <span class="pre">'auto-launch-player',</span> <span class="pre">'logout',</span> <span class="pre">'template-style',</span> <span class="pre">'lang']</span></code></p>
+</div></blockquote>
+</li>
+<li><p class="first"><strong>auth_mode</strong> - <em>string</em> - режимы авторизации (&#8216;password&#8217; - по паролю и номеру абонемента, &#8216;abonement&#8217; - только по номеру абонемента, &#8216;device_uid&#8217; - по устройству).</p>
+</li>
+<li><p class="first"><strong>play_record_continuously</strong> - <em>bool</em> - (только для <code class="docutils literal"><span class="pre">focus</span></code>) флаг, отвечающий за то, непрерывно ли идут записи архива при их просмотре. В случае, если флаг равен false, после окончания передачи архива просмотр прерывается и плеер останавливается.</p>
+</li>
+<li><p class="first"><strong>server_rewind_mode</strong> - <em>bool</em> - (только для <code class="docutils literal"><span class="pre">focus</span></code>) флаг, позволяющий выбрать серверную перемотку. По умолчанию перемотка производится средствами плеера устройства, но в случае включения этого флага при перемотке производится запрос на сервер и в ответ приходит новая ссылка, после чего проигрывание перезапускается.</p>
+</li>
+<li><p class="first"><strong>use_template_default_resolution</strong> - <em>bool</em> - (только для <code class="docutils literal"><span class="pre">focus</span></code>) флаг, отвечающий за использования графического разрешения по умолчанию для данного шаблона.</p>
+</li>
+<li><p class="first"><strong>show_disconnect_message</strong> - <em>bool</em> - (только для <code class="docutils literal"><span class="pre">focus</span></code>) флаг, отвечающий за показ сообщения о разрыве Интернет-соединения.</p>
+</li>
+<li><p class="first"><strong>samsung_guidelines_compatibility_mode</strong> - <em>bool</em> - флаг, при включении которого логика переходов и нажатий подстраивается под политику Samsung.</p>
+</li>
+<li><p class="first"><strong>auto_launch_last_viewed_channel</strong> - <em>bool</em> - флаг, отвечающий за автозапуск последнего просмотренного канала при включении приложения.</p>
+</li>
+<li><p class="first"><strong>programs_limit_for_channel_list_request</strong> - <em>int</em> - задаёт максимальное количество программ для каждого канала при запросе списка каналов. Примечание: для оптимизации для каждого канала запрашивается не только текущая передача, но и несколько с запасом, с целью уменьшения количества обращений на сервер.</p>
+</li>
+<li><p class="first"><strong>default_timezone</strong> - <em>int</em> - часовой пояс по умолчанию.</p>
+</li>
+<li><p class="first"><strong>default_buffersize</strong> - <em>int</em> - размер буферизации по умолчанию (структуру с перечислением значений можно найти в settings.js).</p>
+</li>
+<li><p class="first"><strong>default_lang</strong> - <em>int</em> - язык приложения по умолчанию (структуру с перечислением значений можно найти в settings.js)</p>
+</li>
+</ul>
+<p><strong>МЕТОДЫ</strong></p>
+<ul class="simple">
+<li><strong>detectTemplate()</strong></li>
+</ul>
+<p><em>Определяет имя текущего шаблона.</em></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="10%" />
+<col width="69%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Возращаемое значение</td>
+<td><em>string</em></td>
+<td>Имя шаблона либо пустая строка в случае неудачи</td>
+</tr>
+<tr class="row-even"><td rowspan="2">Пример вызова</td>
+<td colspan="2">App.detectTemplate(); // <code class="docutils literal"><span class="pre">impuls</span></code> -&gt; app.js</td>
+</tr>
+<tr class="row-odd"><td colspan="2">Считывание информации о шаблоне при запуске приложения</td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><strong>reloadToTemplate(templateName)</strong></li>
+</ul>
+<p><em>Запись в cookie-файл имени шаблона и его загрузка.</em></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="14%" />
+<col width="10%" />
+<col width="55%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Принимаемое значение</td>
+<td>templateName</td>
+<td><em>string</em></td>
+<td>Имя шаблона</td>
+</tr>
+<tr class="row-even"><td rowspan="2">Пример вызова</td>
+<td colspan="3">App.reloadToTemplate(this.clientSettings[&#8216;template_name&#8217;]); // <code class="docutils literal"><span class="pre">impuls</span></code> -&gt; app.js</td>
+</tr>
+<tr class="row-odd"><td colspan="3">Перезагрузка шаблона при запуске приложения</td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><strong>detectAndReloadTemplate(templateName, force)</strong></li>
+</ul>
+<p><em>Определение имени шаблона, запись его имени в cookie-файл и загрузка.</em></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="23%" />
+<col width="14%" />
+<col width="10%" />
+<col width="53%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td rowspan="2">Принимаемые значения</td>
+<td>templateName</td>
+<td><em>string</em></td>
+<td>Имя шаблона</td>
+</tr>
+<tr class="row-even"><td>force</td>
+<td><em>bool</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>Возращаемое значение</td>
+<td><em>bool</em></td>
+<td colspan="2">&nbsp;</td>
+</tr>
+<tr class="row-even"><td rowspan="2">Пример вызова</td>
+<td colspan="3">App.detectAndReloadTemplate(settings[&#8216;template&#8217;]); // <code class="docutils literal"><span class="pre">impuls</span></code> -&gt; init.js</td>
+</tr>
+<tr class="row-odd"><td colspan="3">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><strong>setAccountTemplate(templateName)</strong></li>
+</ul>
+<p><em>Запись переданного имени шаблона в поле &#8216;account_template&#8217; cookie-файла и перезагрузка текущего шаблона.</em></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="15%" />
+<col width="10%" />
+<col width="54%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Принимаемое значение</td>
+<td>templateName</td>
+<td><em>string</em></td>
+<td>Имя шаблона абонента</td>
+</tr>
+<tr class="row-even"><td rowspan="2">Пример вызова</td>
+<td colspan="3">App.setAccountTemplate(App.data.getTemplate()); // <code class="docutils literal"><span class="pre">impuls</span></code> -&gt; login.screen.js</td>
+</tr>
+<tr class="row-odd"><td colspan="3">Запись в cookie-файл шаблона абонента при произведении входа в систему</td>
+</tr>
+</tbody>
+</table>
+<p>Примечание. Понятие шаблона абонента связано с возможностью смены стиля оформления приложения, то есть в данном случае имеется ввиду выбранный пользователем шаблон оформления в экране настроек.</p>
+<ul class="simple">
+<li><strong>resetAccountTemplate()</strong></li>
+</ul>
+<p><em>Сброс имён шаблона абонента и шаблона по дефолту из cookie-файла.</em></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="78%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td rowspan="2">Пример вызова</td>
+<td>App.resetAccountTemplate(); // <code class="docutils literal"><span class="pre">impuls</span></code> -&gt; login.screen.js</td>
+</tr>
+<tr class="row-even"><td>Очистка cookie-файла перед тем как произвести вход в систему</td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><strong>fireEvent(eventType, eventArgument)</strong></li>
+</ul>
+<p><em>Запуск функций обработки событий.</em></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="15%" />
+<col width="11%" />
+<col width="53%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td rowspan="2">Принимаемые значения</td>
+<td>eventType</td>
+<td><em>int</em></td>
+<td>Тип произошедшего события</td>
+</tr>
+<tr class="row-even"><td>eventArgument</td>
+<td><em>anyType</em></td>
+<td>Аргумент, с которым будет запущена функция обработки</td>
+</tr>
+<tr class="row-odd"><td rowspan="2">Пример вызова</td>
+<td colspan="3">App.fireEvent(App.EVENT_ON_DEVICE_KEY_EVENT, keyCode); // <code class="docutils literal"><span class="pre">impuls</span></code> -&gt; app.js</td>
+</tr>
+<tr class="row-even"><td colspan="3">Запуск функции, срабатывающей при нажатии какой-либо клавиши c кодом keyCode</td>
+</tr>
+</tbody>
+</table>
+<p><strong>События:</strong></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="36%" />
+<col width="10%" />
+<col width="54%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Событие</td>
+<td>Значение</td>
+<td>Описание</td>
+</tr>
+<tr class="row-even"><td>EVENT_ON_APP_INIT_BEGIN</td>
+<td>0</td>
+<td>Начало инициализации приложения</td>
+</tr>
+<tr class="row-odd"><td>EVENT_ON_APP_INIT_END</td>
+<td>1</td>
+<td>Окончание инициализации приложения</td>
+</tr>
+<tr class="row-even"><td>EVENT_ON_DEVICE_INIT_BEGIN</td>
+<td>2</td>
+<td>Начало инициализации устройства</td>
+</tr>
+<tr class="row-odd"><td>EVENT_ON_DEVICE_INIT_END</td>
+<td>3</td>
+<td>Окончание инициализации устройства</td>
+</tr>
+<tr class="row-even"><td>EVENT_ON_DEVICE_KEY_EVENT</td>
+<td>4</td>
+<td>Событие нажатия клавиши</td>
+</tr>
+<tr class="row-odd"><td>EVENT_ON_ACCOUNT_LOGIN_SUCCESSFUL</td>
+<td>5</td>
+<td>Успешная авторизация</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="application.html" class="btn btn-neutral float-right" title="application.js" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="engine.html" class="btn btn-neutral" title="Описание содержания и структуры engine" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Microimpuls LLC, www.microimpuls.com.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

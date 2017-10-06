@@ -49,8 +49,8 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'justify-docs'
-copyright = u'2016, TrueTank'
-author = u'TrueTank'
+copyright = u'2017, Microimpuls LLC, www.microimpuls.com'
+author = u'Tatiana Moskaleva, Konstantin Shpinev'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
